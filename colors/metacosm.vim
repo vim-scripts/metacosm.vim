@@ -38,7 +38,7 @@ hi WarningMsg term=standout ctermfg=LightRed guifg=Red
 hi WildMenu term=standout ctermbg=Yellow ctermfg=Black guibg=Yellow guifg=Black
 hi Folded term=standout ctermbg=darkgrey ctermfg=black guibg=black guifg=darkgrey
 hi LineNr term=standout ctermbg=darkgrey ctermfg=black guibg=black guifg=darkgrey
-hi FoldColumn term=standout ctermbg=LightGrey ctermfg=DarkBlue guibg=Grey guifg=DarkBlue
+hi FoldColumn term=standout ctermbg=LightGrey ctermfg=DarkBlue guibg=black guifg=darkgrey
 hi DiffAdd term=bold ctermbg=DarkBlue guibg=DarkBlue
 hi DiffChange term=bold ctermbg=DarkMagenta guibg=DarkMagenta
 hi DiffDelete term=bold ctermfg=Blue ctermbg=DarkCyan gui=bold guifg=Blue guibg=DarkCyan
