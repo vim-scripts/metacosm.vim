@@ -1,10 +1,17 @@
 " Vim color file
-" Maintainer:	Robert Melton ( garbage at metacosm dot dhs dot org )
-" Last Change:	2004 May 28
+" Maintainer: Robert Melton ( vim at metacosm dot dhs dot org )
+" Last Change: 2004 June 19th
 
+
+" -----------------------------------------------------------------------------
 " This color scheme uses a dark grey background.
-
-" First remove all existing highlighting.
+" This theme, based on evening (with some input from Torte) is designed to 
+" seperate active text (code) from background/line numbers/folds/listchars by 
+" having different background colors on the non-code and the code (just 
+" slightly).  If you look at the screenshot below, you will get the idea.  
+" All non-code(include indents) and string literals have a black background 
+" while code has a very dark grey background.
+" -----------------------------------------------------------------------------
 set background=dark
 hi clear
 if exists("syntax_on")
@@ -13,42 +20,113 @@ endif
 
 let colors_name = "metacosm"
 
-hi Normal ctermbg=black ctermfg=White guifg=White guibg=grey20
 
-" Groups used in the 'highlight' and 'guicursor' options default value.
-hi ErrorMsg term=standout ctermbg=DarkRed ctermfg=White guibg=Red guifg=White
-hi IncSearch term=reverse cterm=reverse gui=reverse
-hi ModeMsg term=bold cterm=bold gui=bold
-hi StatusLine term=reverse,bold cterm=reverse,bold guifg=blue guibg=white
-hi StatusLineNC term=reverse cterm=reverse gui=reverse
-hi VertSplit term=reverse cterm=reverse gui=reverse
-hi Visual term=reverse cterm=reverse gui=reverse guifg=Grey guibg=fg
-hi VisualNOS term=underline,bold cterm=underline,bold gui=underline,bold
-hi DiffText term=reverse cterm=bold ctermbg=Red gui=bold guibg=Red
-hi Cursor guibg=Green guifg=Black
-hi lCursor guibg=Cyan guifg=Black
-hi Directory term=bold ctermfg=LightCyan guifg=Cyan
-hi MoreMsg term=bold ctermfg=LightGreen gui=bold guifg=SeaGreen
-hi NonText term=standout ctermbg=darkgrey ctermfg=black guibg=black guifg=darkgrey
-hi Question term=standout ctermfg=LightGreen gui=bold guifg=Green
-hi Search term=reverse ctermbg=Yellow ctermfg=Black guibg=Yellow guifg=Black
-hi SpecialKey term=standout ctermbg=black ctermfg=darkgrey guibg=black guifg=darkgrey
-hi Title term=bold ctermfg=LightMagenta gui=bold guifg=Magenta
-hi WarningMsg term=standout ctermfg=LightRed guifg=Red
-hi WildMenu term=standout ctermbg=Yellow ctermfg=Black guibg=Yellow guifg=Black
-hi Folded term=standout ctermbg=darkgrey ctermfg=black guibg=black guifg=darkgrey
-hi LineNr term=standout ctermbg=darkgrey ctermfg=black guibg=black guifg=darkgrey
-hi FoldColumn term=standout ctermbg=LightGrey ctermfg=DarkBlue guibg=black guifg=darkgrey
-hi DiffAdd term=bold ctermbg=DarkBlue guibg=DarkBlue
-hi DiffChange term=bold ctermbg=DarkMagenta guibg=DarkMagenta
-hi DiffDelete term=bold ctermfg=Blue ctermbg=DarkCyan gui=bold guifg=Blue guibg=DarkCyan
+" -----------------------------------------------------------------------------
+" Primary (hyper/selected/colored background)
+" -----------------------------------------------------------------------------
+" Search
+hi IncSearch guibg=black guifg=cyan
+hi Search guibg=black guifg=cyan
 
-" Groups for syntax highlighting
-hi Constant term=underline ctermfg=Magenta guifg=#ffa0a0 guibg=grey5
-hi Special term=bold ctermfg=LightRed guifg=Orange guibg=grey5
-if &t_Co > 8
-	hi Statement term=bold cterm=bold ctermfg=Yellow guifg=#ffff60 gui=bold
-endif
-hi Ignore ctermfg=darkgrey guifg=grey20
+" Visual 
+hi Visual guibg=black guifg=yellow
+hi VisualNOS guibg=black guifg=yellow gui=underline
 
-" vim: sw=8
+" Borders
+hi StatusLine guibg=black guifg=white
+hi StatusLineNC guibg=grey22 guifg=grey45
+hi VertSplit guibg=black guifg=grey45
+
+" Cursors
+hi Cursor guibg=white guifg=black
+hi lCursor guibg=white guifg=black
+
+" Diff
+hi DiffText guibg=red guifg=white gui=bold
+hi DiffAdd guibg=darkblue guifg=white
+hi DiffChange guibg=darkmagenta guifg=white
+hi DiffDelete guibg=darkcyan guifg=blue gui=bold
+
+" Misc
+hi Title guifg=magenta gui=bold
+hi Question guibg=black guifg=green gui=bold
+hi Todo  guibg=black guifg=cyan
+hi Error guibg=red guifg=white
+hi WildMenu guibg=cyan guifg=black
+
+
+" -----------------------------------------------------------------------------
+" Primary (active/code/text/grey background)
+" -----------------------------------------------------------------------------
+" Normal
+hi Normal guibg=grey22 guifg=white
+
+" Constants
+hi Constant guibg=grey22 guifg=#ffa0a0
+hi String guibg=grey22 guifg=#ffa0a0
+hi Character guibg=grey22 guifg=#ffa0a0
+hi Number guibg=grey22 guifg=#ffa0a0
+hi Boolean guibg=grey22 guifg=#ffa0a0
+hi Float guibg=grey22 guifg=#ffa0a0
+
+" Identifier
+hi Identifier guibg=grey22 guifg=#40ffff
+hi Function guibg=grey22 guifg=#40ffff
+
+" Statement
+hi Statement guibg=grey22 guifg=#ffff60
+hi Conditional guibg=grey22 guifg=#ffff60
+hi Repeat guibg=grey22 guifg=#ffff60
+hi Label guibg=grey22 guifg=#ffff60
+hi Operator guibg=grey22 guifg=#ffff60
+hi Keyword guibg=grey22 guifg=#ffff60
+hi Exception guibg=grey22 guifg=#ffff60
+
+" PreProc
+hi PreProc guibg=grey22 guifg=#ff80ff
+hi Include guibg=grey22 guifg=#ff80ff
+hi Define guibg=grey22 guifg=#ff80ff
+hi Macro guibg=grey22 guifg=#ff80ff
+hi PreCondit guibg=grey22 guifg=#ff80ff
+
+" Type
+hi Type guibg=grey22 guifg=#60ff60
+hi StorageClass guibg=grey22 guifg=#60ff60
+hi Structure guibg=grey22 guifg=#60ff60
+hi Typedef guibg=grey22 guifg=#60ff60
+
+" Special
+hi Special guibg=grey22 guifg=orange
+hi SpecialChar guibg=grey22 guifg=orange
+hi Tag guibg=grey22 guifg=orange
+hi Delimiter guibg=grey22 guifg=orange
+hi Debug guibg=grey22 guifg=orange
+
+" Misc
+hi Underlined guibg=grey22 guifg=#ffff60 gui=underline
+
+
+" -----------------------------------------------------------------------------
+" Secondary (inactive/black background)
+" -----------------------------------------------------------------------------
+" Comments
+hi Comment guibg=black guifg=#80a0ff
+hi SpecialComment guibg=black guifg=#80a0ff gui=underline
+
+" Messages
+hi ModeMsg guibg=black guifg=white gui=bold
+hi MoreMsg guibg=black guifg=seagreen gui=bold
+hi WarningMsg guibg=black guifg=blue gui=bold
+hi ErrorMsg guibg=black guifg=red gui=bold
+
+" Folding
+hi Folded guibg=black guifg=grey45
+hi FoldColumn guibg=black guifg=grey45
+
+" Misc
+hi Ignore guibg=black guifg=grey45
+hi NonText guibg=black guifg=grey45
+hi LineNr guibg=black guifg=grey45
+hi SpecialKey guibg=black guifg=grey45
+hi SignColumn guibg=black guifg=grey45
+hi Directory guibg=black guifg=cyan
