@@ -1,0 +1,7 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=985
+
+You can get this script in the sampler pack at http://vim.sourceforge.net/scripts/script.php?script_id=625 as the other 99 top rated themes. 
+
+A major goal of this colorscheme is to have all the elements of the editor properly themed, including listchars, fold columns, folds, comments, line numbers and everything else you can think off -- if you find something that seems to stick out from the rest, please email me.  I make this a point because I dislike themes that are nice, dark and soothing except for showing painfully bright line numbers and/or listchars. 
+
+Screenshot at: http://vi-improved.org/metacosm.png
