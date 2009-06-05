@@ -1,7 +1,5 @@
 " Maintainer: Robert Melton ( iam -at- robertmelton -dot- com)
-" Last Change: 2008 Nov 15th
-
-
+" Last Change: 2009 June 4th
 
 " -----------------------------------------------------------------------------
 " This color scheme uses a dark grey background.
@@ -19,8 +17,6 @@ if exists("syntax_on")
 endif
 
 let colors_name = "metacosm"
-
-
 
 " -----------------------------------------------------------------------------
 " Primary (hyper/selected/colored background)
@@ -54,8 +50,6 @@ hi Question guibg=black guifg=green gui=bold
 hi Todo  guibg=black guifg=cyan
 hi Error guibg=red guifg=white
 hi WildMenu guibg=cyan guifg=black
-
-
 
 " -----------------------------------------------------------------------------
 " Primary (active/code/text/grey background)
@@ -107,8 +101,6 @@ hi Debug guibg=black guifg=orange
 " Misc
 hi Underlined guibg=black guifg=#ffff60 gui=underline
 
-
-
 " -----------------------------------------------------------------------------
 " Secondary (inactive/black background)
 " -----------------------------------------------------------------------------
@@ -134,8 +126,6 @@ hi SpecialKey guibg=black guifg=grey45
 hi SignColumn guibg=black guifg=grey45
 hi Directory guibg=black guifg=cyan
 
-
-
 " -----------------------------------------------------------------------------
 " Vim 7.x only
 " ----------------------------------------------------------------------------
@@ -144,10 +134,3 @@ hi CursorLine guibg=grey5
 hi CursorColumn guibg=grey5
 hi Pmenu guibg=grey20 guifg=white
 hi PmenuSel guibg=lightblue guifg=black
-
-
-
-" -----------------------------------------------------------------------------
-" For Plugins
-" ----------------------------------------------------------------------------
-hi MyTagListFileName guibg=black guifg=yellow
