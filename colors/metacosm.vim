@@ -111,7 +111,7 @@ hi SpecialComment guibg=black guifg=#80a0ff gui=underline
 " Messages
 hi ModeMsg guibg=black guifg=white gui=bold
 hi MoreMsg guibg=black guifg=seagreen gui=bold
-hi WarningMsg guibg=black guifg=blue gui=bold
+hi WarningMsg guibg=black guifg=pink gui=bold
 hi ErrorMsg guibg=black guifg=red gui=bold
 
 " Folding
@@ -133,4 +133,4 @@ hi MatchParen guibg=purple guifg=yellow
 hi CursorLine guibg=grey5 
 hi CursorColumn guibg=grey5
 hi Pmenu guibg=grey20 guifg=white
-hi PmenuSel guibg=lightblue guifg=black
+hi PmenuSel guibg=green guifg=black
